@@ -1,0 +1,53 @@
+﻿
+.stackContainer ul {
+    list-style-type: none;
+    margin: 10px 0px 0px 0px;
+    padding: 0;
+    float: left;
+    width: 100%;
+    clear: both;
+}
+
+/* The three rotated elements */
+.stackContainer li,.stackContainer  a, .stackContainer img {
+    border: 0;
+    display: inline-block; /* Isn't really required if float: left is included but would it'd be nice to remove the float one day. */
+    float: left; /* Fixes bug in FF where inline elements don't seem to rotate on the correct axis. */
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 4px #333;
+    -moz-box-shadow: 0 0 4px #333;
+    -o-box-shadow: 0 0 4px #333;
+    -ms-box-shadow: 0 0 4px #333;
+    box-shadow: 0 0 4px #333;
+}
+
+/* First rotation */
+.stackContainer li {
+    margin: 0 25px 25px 0;
+    padding: 1px;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+/* Second rotation will appear as -2deg. */
+.stackContainer a {
+    padding: 0;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+
+/* Third rotation will appear as 0. */
+.stackContainer img {
+    padding: 5px;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
